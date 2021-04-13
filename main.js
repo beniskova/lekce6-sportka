@@ -13,6 +13,7 @@ for (let i = 1; i <= 49; i = i + 1) {
     osudi.push(i);
 }
 // z osudí vyberu 7 náhodných čísel
+
 let tazenaCisla = [];
 for (let i = 1; i <= 7; i++) {
     let vyherniIndex = Math.floor(Math.random() * osudi.length);
@@ -23,5 +24,9 @@ for (let i = 1; i <= 7; i++) {
 
 }
 
-
 //vypíšu do HTML
+let vyherniCisla = document.querySelector('#vyherni-cisla');
+
+for (let i = 0; i < tazenaCisla.length; i++) {
+    vyherniCisla.innerHTML += '<span class="cislo">' + tazenaCisla[i] + '</span >';
+}
